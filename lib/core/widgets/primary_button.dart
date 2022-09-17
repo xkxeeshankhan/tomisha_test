@@ -14,6 +14,8 @@ class PrimaryButton extends StatelessWidget {
         AppColor.green,
         AppColor.blue,
       ],
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
     ),
   }) : super(key: key);
 

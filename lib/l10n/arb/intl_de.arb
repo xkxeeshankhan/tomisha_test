@@ -1,0 +1,103 @@
+{
+  "@@last_modified": "2022-09-17T17:01:29.119944",
+  "@@locale": "de",
+  "loginTitle": "Login",
+  "@loginTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "about": "Deine Job website",
+  "@about": {
+    "description": "",
+    "type": "text"
+  },
+
+  "registerText": "Kostenlos Registrieren",
+  "@registerText": {
+    "description": "",
+    "type": "text"
+  },
+
+  "workerTitle": "Arbeitnehmer",
+  "@workerTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "workerStepTitle": "Drei einfache Schritte\nzu deinem neuen Job",
+  "@workerStepTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "workerStep1": "Erstellen dein Lebenslauf",
+  "@workerStep1": {
+    "description": "",
+    "type": "text"
+  },
+  "workerStep2": "Erstellen dein Lebenslauf",
+  "@workerStep2": {
+    "description": "",
+    "type": "text"
+  },
+  "workerStep3": "Mit nur einem Klick\nbewerben",
+  "@workerStep3": {
+    "description": "",
+    "type": "text"
+  },
+
+  "employerTitle": "Arbeitgeber",
+  "@employerTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "employerStepTitle": "Drei einfache Schritte\nzu deinem neuen Mitarbeiter",
+  "@employerStepTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "employerStep1": "Erstellen dein\nUnternehmensprofil",
+  "@employerStep1": {
+    "description": "",
+    "type": "text"
+  },
+  "employerStep2": "Erstellen ein Jobinserat",
+  "@employerStep2": {
+    "description": "",
+    "type": "text"
+  },
+  "employerStep3": "Wähle deinen neuen\nMitarbeiter aus",
+  "@employerStep3": {
+    "description": "",
+    "type": "text"
+  },
+
+  "temporaryTitle": "Temporärbüro",
+  "@temporaryTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "temporaryStepTitle": "Drei einfache Schritte zur\nVermittlung neuer Mitarbeiter",
+  "@temporaryStepTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "temporaryStep1": "Erstellen dein\nUnternehmensprofil",
+  "@temporaryStep1": {
+    "description": "",
+    "type": "text"
+  },
+  "temporaryStep2": "Erhalte Vermittlungs-\nangebot von Arbeitgeber",
+  "@temporaryStep2": {
+    "description": "",
+    "type": "text"
+  },
+  "temporaryStep3": "Vermittlung nach\nProvision oder\nStundenlohn",
+  "@temporaryStep3": {
+    "description": "",
+    "type": "text"
+  },
+  "appTitle": "Test",
+  "@appTitle": {
+    "description": "",
+    "type": "text"
+  }
+}

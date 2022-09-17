@@ -1,0 +1,103 @@
+{
+  "@@last_modified": "2022-09-17T17:01:29.119944",
+  "@@locale": "en",
+  "loginTitle": "Login",
+  "@loginTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "about": "Your job website",
+  "@about": {
+    "description": "",
+    "type": "text"
+  },
+
+  "registerText": "Register for free",
+  "@registerText": {
+    "description": "",
+    "type": "text"
+  },
+
+  "workerTitle": "Worker",
+  "@workerTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "workerStepTitle": "Three easy steps\nto your new job",
+  "@workerStepTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "workerStep1": "Create your CV",
+  "@workerStep1": {
+    "description": "",
+    "type": "text"
+  },
+  "workerStep2": "Create your CV",
+  "@workerStep2": {
+    "description": "",
+    "type": "text"
+  },
+  "workerStep3": "Apply with just\none click",
+  "@workerStep3": {
+    "description": "",
+    "type": "text"
+  },
+
+  "employerTitle": "Employer",
+  "@employerTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "employerStepTitle": "Three simple steps\nto your new employee",
+  "@employerStepTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "employerStep1": "Create your\ncompany profile",
+  "@employerStep1": {
+    "description": "",
+    "type": "text"
+  },
+  "employerStep2": "Create a job ad",
+  "@employerStep2": {
+    "description": "",
+    "type": "text"
+  },
+  "employerStep3": "Select your new\nemployee",
+  "@employerStep3": {
+    "description": "",
+    "type": "text"
+  },
+
+  "temporaryTitle": "Temporary office",
+  "@temporaryTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "temporaryStepTitle": "Three simple steps to\nplace new employees",
+  "@temporaryStepTitle": {
+    "description": "",
+    "type": "text"
+  },
+  "temporaryStep1": "Create your\ncompany profile",
+  "@temporaryStep1": {
+    "description": "",
+    "type": "text"
+  },
+  "temporaryStep2": "Receive placement\noffer from employer",
+  "@temporaryStep2": {
+    "description": "",
+    "type": "text"
+  },
+  "temporaryStep3": "Placement based\non commissionor\nhourly wage",
+  "@temporaryStep3": {
+    "description": "",
+    "type": "text"
+  },
+  "appTitle": "Test",
+  "@appTitle": {
+    "description": "",
+    "type": "text"
+  }
+}
