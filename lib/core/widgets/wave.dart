@@ -35,7 +35,7 @@ class Wave2 extends CustomClipper<Path> {
       size.width * .5,
       size.height * .2,
       size.width,
-       size.height * .1,
+      size.height * .1,
     );
 
     path.lineTo(size.width, size.height);

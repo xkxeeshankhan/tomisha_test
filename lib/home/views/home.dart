@@ -29,81 +29,80 @@ class HomePage extends StatelessWidget {
               _old.showRegisterButtonInAppbar !=
               _new.showRegisterButtonInAppbar,
           builder: (context, state) {
-            return ResponsiveBuilder(
-              builder: (context, sizing) {
-                final isMobile = sizing.deviceScreenType == DeviceScreenType.mobile;
-                return AppBar(
-                  actions: [
-                    if (state.showRegisterButtonInAppbar && !isMobile) ...[
-                      SizedBox(
-                        height: kToolbarHeight,
-                        child: Center(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: Text(
-                              localization.clickHere,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .subtitle1!
-                                  .copyWith(color: AppColor.black2),
-                            ),
+            return ResponsiveBuilder(builder: (context, sizing) {
+              final isMobile =
+                  sizing.deviceScreenType == DeviceScreenType.mobile;
+              return AppBar(
+                actions: [
+                  if (state.showRegisterButtonInAppbar && !isMobile) ...[
+                    SizedBox(
+                      height: kToolbarHeight,
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Text(
+                            localization.clickHere,
+                            style: Theme.of(context)
+                                .textTheme
+                                .subtitle1!
+                                .copyWith(color: AppColor.black2),
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: 255,
-                        child: Center(
-                          child: SecondaryButton(
-                            width: 255,
-                            borderRadius: BorderRadius.circular(12),
-                            child: Text(
-                              localization.registerText,
-                              style: Theme.of(context).textTheme.subtitle2,
-                            ),
-                            onPressed: () {},
+                    ),
+                    SizedBox(
+                      width: 255,
+                      child: Center(
+                        child: SecondaryButton(
+                          width: 255,
+                          borderRadius: BorderRadius.circular(12),
+                          child: Text(
+                            localization.registerText,
+                            style: Theme.of(context).textTheme.subtitle2,
                           ),
+                          onPressed: () {},
                         ),
                       ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                    ],
-                    AppTextButton(
-                      child: Text(
-                        localization.loginTitle,
-                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                              color: AppColor.green,
-                            ),
-                      ),
-                      onPressed: () {},
                     ),
-                    AppTextButton(
-                      child: Text(
-                        'EN',
-                        style: Theme.of(context).textTheme.headline6,
-                      ),
-                      onPressed: () {
-                        context
-                            .read<LocalizationCubit>()
-                            .changeLocale(Locale('en'));
-                      },
-                    ),
-                    AppTextButton(
-                      child: Text(
-                        'DE',
-                        style: Theme.of(context).textTheme.headline6,
-                      ),
-                      onPressed: () {
-                        context
-                            .read<LocalizationCubit>()
-                            .changeLocale(Locale('de'));
-                      },
+                    SizedBox(
+                      width: 10,
                     ),
                   ],
-                  elevation: 3,
-                );
-              }
-            );
+                  AppTextButton(
+                    child: Text(
+                      localization.loginTitle,
+                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                            color: AppColor.green,
+                          ),
+                    ),
+                    onPressed: () {},
+                  ),
+                  AppTextButton(
+                    child: Text(
+                      'EN',
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    onPressed: () {
+                      context
+                          .read<LocalizationCubit>()
+                          .changeLocale(Locale('en'));
+                    },
+                  ),
+                  AppTextButton(
+                    child: Text(
+                      'DE',
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    onPressed: () {
+                      context
+                          .read<LocalizationCubit>()
+                          .changeLocale(Locale('de'));
+                    },
+                  ),
+                ],
+                elevation: 3,
+              );
+            });
           },
         ),
       ),
