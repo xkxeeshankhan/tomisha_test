@@ -23,10 +23,36 @@ class HomeDataView extends StatelessWidget {
         ignoring: true,
         child: SizedBox(
           height: isMobile
-              ? 3.h + 260 + 320 + 260 + 300
+              ? 3.h + 260 + 320 + 260 + 200
               : 3.h + 90 + 400 + 370 + 600,
           child: Stack(
             children: [
+              if (isMobile)
+                Positioned(
+                  top: 600,
+                  left: -80,
+                  child: Container(
+                    width: 350,
+                    height: 340,
+                    decoration: BoxDecoration(
+                      color: AppColor.lightWhite,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                ),
+              if (isMobile)
+                Positioned(
+                  top: 200,
+                  left: -40,
+                  child: Container(
+                    width: 200,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      color: AppColor.lightWhite.withOpacity(.5),
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                ),
               Positioned(
                 top: 0,
                 right: 0,
@@ -366,23 +392,26 @@ class _Step2 extends StatelessWidget {
               ],
             ),
           );
-    return ClipPath(
-      clipper: Wave3(),
+    return Transform(
+      transform: Matrix4.translationValues(0, isMobile ? -100 : 0, 0),
       child: ClipPath(
-        clipper: Wave2(),
-        child: Container(
-          height: (isMobile ? 50 : 0) + 370,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                AppColor.lightGreen,
-                AppColor.lightBlue,
-              ],
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
+        clipper: Wave3(),
+        child: ClipPath(
+          clipper: Wave2(),
+          child: Container(
+            height: (isMobile ? 50 : 0) + 370,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  AppColor.lightGreen,
+                  AppColor.lightBlue,
+                ],
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+              ),
             ),
+            child: child,
           ),
-          child: child,
         ),
       ),
     );
@@ -403,7 +432,7 @@ class _Step3 extends StatelessWidget {
   Widget build(BuildContext context) {
     if (isMobile)
       return Transform(
-        transform: Matrix4.translationValues(0, -80, 0),
+        transform: Matrix4.translationValues(0, -80 - 100, 0),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(

@@ -21,7 +21,8 @@ dependencies:
   flutter_svg: ^1.1.5
   intl: ^0.17.0
   simple_animations: ^5.0.0
-  
+  visibility_detector: ^0.3.3
+
 dev_dependencies:
   bloc_test: ^9.1.0
   flutter_test:
@@ -34,28 +35,28 @@ flutter_gen:
 flutter:
   uses-material-design: true
   generate: true
-        
+
   assets:
     - assets/icons/
 
   fonts:
-  - family: Lato
-    fonts:
-      - asset: assets/fonts/lato/Lato-Thin.ttf
-        weight: 100
-      - asset: assets/fonts/lato/Lato-ExtraLight.ttf
-        weight: 200
-      - asset: assets/fonts/lato/Lato-Light.ttf
-        weight: 300
-      - asset: assets/fonts/lato/Lato-Regular.ttf
-        weight: 400
-      - asset: assets/fonts/lato/Lato-Medium.ttf
-        weight: 500
-      - asset: assets/fonts/lato/Lato-SemiBold.ttf
-        weight: 600
-      - asset: assets/fonts/lato/Lato-Bold.ttf
-        weight: 700
-      - asset: assets/fonts/lato/Lato-ExtraBold.ttf
-        weight: 800
-      - asset: assets/fonts/lato/Lato-Black.ttf
-        weight: 900
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/lato/Lato-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/lato/Lato-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/lato/Lato-Light.ttf
+          weight: 300
+        - asset: assets/fonts/lato/Lato-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/lato/Lato-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/lato/Lato-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/lato/Lato-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/lato/Lato-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/lato/Lato-Black.ttf
+          weight: 900

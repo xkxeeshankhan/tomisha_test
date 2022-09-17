@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -7,20 +5,14 @@ import 'package:test_app/core/core.dart';
 import 'package:test_app/home/home.dart';
 import 'package:test_app/l10n/l10n.dart';
 
-extension PageControllerX on PageController {
-  Stream<double?> pageStream(BuildContext context) async* {
-    // ignore: close_sinks
-    final stream = StreamController<double?>();
-    this.addListener(() {
-      stream.add(this.page);
-    });
-    yield* stream.stream;
-  }
-}
-
 class HomePage extends StatelessWidget {
   static Route route() {
-    return MaterialPageRoute(builder: (_) => HomePage());
+    return MaterialPageRoute(
+      builder: (_) => BlocProvider(
+        create: (context) => HomeCubit(),
+        child: HomePage(),
+      ),
+    );
   }
 
   const HomePage({Key? key}) : super(key: key);
@@ -28,46 +20,95 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localization = context.localizations;
-    return BlocProvider(
-      create: (context) => HomeCubit(),
-      child: Scaffold(
-        backgroundColor: AppColor.white,
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(kToolbarHeight + 2),
-          child: AppBar(
-            actions: [
-              AppTextButton(
-                child: Text(
-                  localization.loginTitle,
-                  style: Theme.of(context).textTheme.subtitle1,
-                ),
-                onPressed: () {},
-              ),
-              AppTextButton(
-                child: Text(
-                  'EN',
-                  style: Theme.of(context).textTheme.headline6,
-                ),
-                onPressed: () {
-                  context.read<LocalizationCubit>().changeLocale(Locale('en'));
-                },
-              ),
-              AppTextButton(
-                child: Text(
-                  'DE',
-                  style: Theme.of(context).textTheme.headline6,
-                ),
-                onPressed: () {
-                  context.read<LocalizationCubit>().changeLocale(Locale('de'));
-                },
-              ),
-            ],
-            elevation: 3,
-          ),
+    return Scaffold(
+      backgroundColor: AppColor.white,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(kToolbarHeight + 2),
+        child: BlocBuilder<HomeCubit, HomeState>(
+          buildWhen: (_old, _new) =>
+              _old.showRegisterButtonInAppbar !=
+              _new.showRegisterButtonInAppbar,
+          builder: (context, state) {
+            return ResponsiveBuilder(
+              builder: (context, sizing) {
+                final isMobile = sizing.deviceScreenType == DeviceScreenType.mobile;
+                return AppBar(
+                  actions: [
+                    if (state.showRegisterButtonInAppbar && !isMobile) ...[
+                      SizedBox(
+                        height: kToolbarHeight,
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                            child: Text(
+                              localization.clickHere,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .subtitle1!
+                                  .copyWith(color: AppColor.black2),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 255,
+                        child: Center(
+                          child: SecondaryButton(
+                            width: 255,
+                            borderRadius: BorderRadius.circular(12),
+                            child: Text(
+                              localization.registerText,
+                              style: Theme.of(context).textTheme.subtitle2,
+                            ),
+                            onPressed: () {},
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                    ],
+                    AppTextButton(
+                      child: Text(
+                        localization.loginTitle,
+                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                              color: AppColor.green,
+                            ),
+                      ),
+                      onPressed: () {},
+                    ),
+                    AppTextButton(
+                      child: Text(
+                        'EN',
+                        style: Theme.of(context).textTheme.headline6,
+                      ),
+                      onPressed: () {
+                        context
+                            .read<LocalizationCubit>()
+                            .changeLocale(Locale('en'));
+                      },
+                    ),
+                    AppTextButton(
+                      child: Text(
+                        'DE',
+                        style: Theme.of(context).textTheme.headline6,
+                      ),
+                      onPressed: () {
+                        context
+                            .read<LocalizationCubit>()
+                            .changeLocale(Locale('de'));
+                      },
+                    ),
+                  ],
+                  elevation: 3,
+                );
+              }
+            );
+          },
         ),
-        body: _Template(),
-        bottomNavigationBar: _BottomNavigation(),
       ),
+      body: _Template(),
+      bottomNavigationBar: _BottomNavigation(),
     );
   }
 }
@@ -76,6 +117,7 @@ class _Template extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      controller: context.read<HomeCubit>().controller,
       child: Column(
         children: [
           HomePageHandShake(),

@@ -48,8 +48,10 @@ class _Mobile extends StatelessWidget {
           left: -20,
           right: -20,
           top: 60,
-          child: SvgPicture.asset(
-            Assets.unDrawAgreement,
+          child: IllustrationAnimation(
+            child: SvgPicture.asset(
+              Assets.unDrawAgreement,
+            ),
           ),
         ),
         Positioned(
@@ -60,10 +62,12 @@ class _Mobile extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Center(
-                child: Text(
-                  localization.about,
-                  maxLines: 2,
-                  style: Theme.of(context).textTheme.headline3,
+                child: IllustrationAnimation(
+                  child: Text(
+                    localization.about,
+                    maxLines: 2,
+                    style: Theme.of(context).textTheme.headline3,
+                  ),
                 ),
               ),
             ),
@@ -88,39 +92,43 @@ class _Others extends StatelessWidget {
       children: [
         SizedBox(
           width: 320,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                localization.about,
-                style: Theme.of(context).textTheme.headline2,
-              ),
-              SizedBox(
-                height: 3.h,
-              ),
-              PrimaryButton(
-                width: double.maxFinite,
-                borderRadius: BorderRadius.circular(12),
-                onPressed: () {},
-                child: Text(
-                  localization.registerText,
+          child: IllustrationAnimation(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  localization.about,
+                  style: Theme.of(context).textTheme.headline2,
                 ),
-              ),
-            ],
+                SizedBox(
+                  height: 3.h,
+                ),
+                PrimaryButton(
+                  width: double.maxFinite,
+                  borderRadius: BorderRadius.circular(12),
+                  onPressed: () {},
+                  child: Text(
+                    localization.registerText,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         SizedBox(
           width: 1.w,
         ),
         Center(
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(200),
-            child: Container(
-              width: 180,
-              height: 180,
-              color: AppColor.white,
-              child: SvgPicture.asset(Assets.unDrawAgreement),
+          child: IllustrationAnimation(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(200),
+              child: Container(
+                width: 180,
+                height: 180,
+                color: AppColor.white,
+                child: SvgPicture.asset(Assets.unDrawAgreement),
+              ),
             ),
           ),
         ),

@@ -18,6 +18,13 @@
     "type": "text"
   },
 
+  "clickHere": "Now click",
+  "@clickHere": {
+    "description": "",
+    "type": "text"
+  },
+
+
   "workerTitle": "Worker",
   "@workerTitle": {
     "description": "",
