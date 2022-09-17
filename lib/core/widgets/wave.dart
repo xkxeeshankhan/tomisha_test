@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+/// @{template}
+/// [Wave1] used custom clip, to createa wave structure for the bottom side.
+/// @{endTemplate}
 class Wave1 extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
@@ -23,6 +26,9 @@ class Wave1 extends CustomClipper<Path> {
   }
 }
 
+/// @{template}
+/// [Wave2] used custom clip, to create wave structure for the top side.
+/// @{endTemplate}
 class Wave2 extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
@@ -50,36 +56,9 @@ class Wave2 extends CustomClipper<Path> {
   }
 }
 
-// class Wave2Part extends CustomClipper<Path> {
-//   @override
-//   Path getClip(Size size) {
-//     Path path = Path();
-//     path.lineTo(
-//       size.width * .88,
-//       0,
-//     );
-
-//     path.cubicTo(
-//       size.width * .25,
-//       0,
-//       size.width * .5,
-//       size.height * .2,
-//       size.width,
-//       0,
-//     );
-
-//     path.lineTo(size.width, size.height);
-//     path.lineTo(0, size.height);
-
-//     return path;
-//   }
-
-//   @override
-//   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
-//     return true;
-//   }
-// }
-
+/// @{template}
+/// [Wave3] used custom clip, to create wave structure for the bottom side.
+/// @{endTemplate}
 class Wave3 extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {

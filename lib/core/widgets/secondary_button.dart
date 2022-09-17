@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/core/core.dart';
 
+/// @{template}
+/// Custom created app button with border.
+/// @{endTemplate}
 class SecondaryButton extends StatelessWidget {
   const SecondaryButton({
     Key? key,

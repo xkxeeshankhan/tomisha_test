@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/core/core.dart';
 
+/// As this is not a complete project, so this file
+/// only has data that is currently being used.
+/// @{template}
+/// Contains all the typography, text style and theme data.
+/// @{endTemplate}
 abstract class AppTypography {
   static final lato = 'Lato';
 

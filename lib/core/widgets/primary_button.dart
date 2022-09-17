@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/core/core.dart';
 
+/// @{template primary_button}
+/// The custom create app primary button with gradien color.
+/// @{endTemplate}
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
     Key? key,

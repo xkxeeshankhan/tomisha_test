@@ -2,6 +2,9 @@ import 'package:equatable/equatable.dart';
 import 'package:test_app/core/core.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+/// @{template}
+/// [HomeData] has the changing attributes for the UI.
+/// @{endTemplate}
 class HomeData extends Equatable {
   HomeData({
     required this.text,
