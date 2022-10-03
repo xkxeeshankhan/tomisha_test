@@ -3,7 +3,9 @@
 
 ## Video
 
-<video src='https://raw.githubusercontent.com/xkxeeshankhan/tomisha_test/master/assets/video.mp4'/>
+
+https://user-images.githubusercontent.com/44693638/193510069-86f5bf87-b121-44b5-bdc5-f0cc0ae0ad9a.mp4
+
 
 
 ## Getting Started 🚀
